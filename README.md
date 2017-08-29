@@ -7,6 +7,6 @@ Brought to you by:
 - Charlie Schwehm (Wecsje)
 
 Present pack includes the following McDonnell Douglas MD-10 variants:
-- MD-10
+- MD-10-30
 
 Requres the MD-11Family to be installed first!
