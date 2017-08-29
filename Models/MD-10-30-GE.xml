@@ -249,12 +249,12 @@
 		<property>controls/flight/elevator-out-left</property>
 		<factor>40</factor>
 		<axis>
-			<x1-m>26.6754</x1-m>
-			<y1-m>-10.7404</y1-m>
-			<z1-m>8.54085</z1-m>
-			<x2-m>22.4219</x2-m>
-			<y2-m>-1.35808</y2-m>
-			<z2-m>6.80586</z2-m>
+			<x1-m>26.77064</x1-m>
+			<y1-m>-10.73560</y1-m>
+			<z1-m>8.52537</z1-m>
+			<x2-m>24.00984</x2-m>
+			<y2-m>-4.78229</y2-m>
+			<z2-m>7.43374</z2-m>
 		</axis>
 	</animation>
 	
@@ -264,12 +264,12 @@
 		<property>controls/flight/elevator-in-left</property>
 		<factor>40</factor>
 		<axis>
-			<x1-m>26.6754</x1-m>
-			<y1-m>-10.7404</y1-m>
-			<z1-m>8.54085</z1-m>
-			<x2-m>22.4219</x2-m>
-			<y2-m>-1.35808</y2-m>
-			<z2-m>6.80586</z2-m>
+			<x1-m>26.77064</x1-m>
+			<y1-m>-10.73560</y1-m>
+			<z1-m>8.52537</z1-m>
+			<x2-m>24.00984</x2-m>
+			<y2-m>-4.78229</y2-m>
+			<z2-m>7.43374</z2-m>
 		</axis>
 	</animation>
 	
@@ -279,12 +279,12 @@
 		<property>controls/flight/elevator-in-right</property>
 		<factor>-40</factor>
 		<axis>
-			<x1-m>26.6298</x1-m>
-			<y1-m>10.7356</y1-m>
+			<x1-m>26.77064</x1-m>
+			<y1-m>10.73560</y1-m>
 			<z1-m>8.52537</z1-m>
-			<x2-m>22.4219</x2-m>
-			<y2-m>1.35808</y2-m>
-			<z2-m>6.80586</z2-m>
+			<x2-m>24.00984</x2-m>
+			<y2-m>4.78229</y2-m>
+			<z2-m>7.43374</z2-m>
 		</axis>
 	</animation>
 	
@@ -294,12 +294,12 @@
 		<property>controls/flight/elevator-out-right</property>
 		<factor>-40</factor>
 		<axis>
-			<x1-m>26.6298</x1-m>
-			<y1-m>10.7356</y1-m>
+			<x1-m>26.77064</x1-m>
+			<y1-m>10.73560</y1-m>
 			<z1-m>8.52537</z1-m>
-			<x2-m>22.4219</x2-m>
-			<y2-m>1.35808</y2-m>
-			<z2-m>6.80586</z2-m>
+			<x2-m>24.00984</x2-m>
+			<y2-m>4.78229</y2-m>
+			<z2-m>7.43374</z2-m>
 		</axis>
 	</animation>
 	
