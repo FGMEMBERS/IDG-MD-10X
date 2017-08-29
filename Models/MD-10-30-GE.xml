@@ -30,7 +30,79 @@
 		</offsets>
 	</model>
 	
-		<!-- Ailerons -->
+	<animation>
+		<type>material</type>
+		<object-name>Fuselage</object-name>
+		<object-name>Vstab</object-name>
+		<object-name>DoorL1</object-name>
+		<object-name>DoorL2</object-name>
+		<object-name>DoorL3</object-name>
+		<object-name>DoorL4</object-name>
+		<object-name>DoorR1</object-name>
+		<object-name>DoorR2</object-name>
+		<object-name>DoorR3</object-name>
+		<object-name>DoorR4</object-name>
+		<object-name>GearNDoorL1</object-name>
+		<object-name>GearNDoorL2</object-name>
+		<object-name>GearNDoorR1</object-name>
+		<object-name>GearNDoorR2</object-name>
+		<object-name>GearCDoorL1</object-name>
+		<object-name>GearCDoorL2</object-name>
+		<object-name>GearCDoorR1</object-name>
+		<object-name>GearCDoorR2</object-name>
+		<object-name>Nacelle1</object-name>
+		<object-name>Nacelle2</object-name>
+		<object-name>Nacelle3</object-name>
+		<object-name>Reverser1</object-name>
+		<object-name>Reverser2</object-name>
+		<object-name>Reverser3</object-name>
+		<property-base>sim/model/livery</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>Blank.png</texture>
+	</animation>
+	
+	<!-- Engines -->
+	
+	<animation>
+		<name>Reverse thrust</name>
+		<type>translate</type>
+		<object-name>Reverser1</object-name>
+		<property>sim/multiplay/generic/float[7]</property>
+		<factor>0.4</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<name>Reverse thrust</name>
+		<type>translate</type>
+		<object-name>Reverser2</object-name>
+		<property>sim/multiplay/generic/float[8]</property>
+		<factor>0.4</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<name>Reverse thrust</name>
+		<type>translate</type>
+		<object-name>Reverser3</object-name>
+		<property>sim/multiplay/generic/float[9]</property>
+		<factor>0.4</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!-- Ailerons -->
 	<animation>
 		<name>Left inner aileron</name>
 		<type>rotate</type>
