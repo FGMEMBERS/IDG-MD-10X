@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+#########################################
+# Copyright (c) it0uchpods Design Group #
+#########################################
+-->
+
+<PropertyList include="../MD-11Family/MD-11-main.xml">
+
+	<sim>
+	
+		<author>it0uchpods Design Group: Joshua Davidson (it0uchpods), Jonathan Redpath (legoboyvdlp), Charlie Schwehm (Wecsje)</author>
+		
+		<status>Pre V1.0</status>
+		
+		<checklists include="MD-11-Checklists.xml"/>
+		
+		<previews>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash1.png</path>
+			</preview>
+		</previews>
+
+		<startup>
+			<splash-texture>Aircraft/MD-10Family/Splash/SplashOld.png</splash-texture>
+		</startup>
+			
+		<view>
+			<name>Captain View</name>
+			<internal type="bool" archive="y">true</internal>
+			<config>
+				<x-offset-m archive="y">-0.5238</x-offset-m>
+				<y-offset-m archive="y">7.2709</y-offset-m>
+				<z-offset-m archive="y">-24.40</z-offset-m>
+				<default-field-of-view-deg type="double">80</default-field-of-view-deg>
+				<pitch-offset-deg archive="y">-15.0</pitch-offset-deg>
+			</config>
+		</view>
+		<view n="100">
+			<name>First Officer View</name>
+			<type>lookfrom</type>
+			<enabled type="bool">true</enabled>
+			<internal type="bool" archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">0.5238</x-offset-m>
+				<y-offset-m archive="y">7.2709</y-offset-m>
+				<z-offset-m archive="y">-24.40</z-offset-m>
+				<default-field-of-view-deg type="double">80</default-field-of-view-deg>
+				<pitch-offset-deg archive="y">-15.0</pitch-offset-deg>
+			</config>
+		</view>
+		<view n="101"> 
+			<name>Overhead Panel</name>
+			<type>lookfrom</type>
+			<enabled type="bool">true</enabled>
+			<internal type="bool" archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">0.0</x-offset-m>
+				<y-offset-m archive="y">7.2709</y-offset-m>
+				<z-offset-m archive="y">-24.00</z-offset-m>
+				<pitch-offset-deg archive="y">30.0</pitch-offset-deg>
+				<default-field-of-view-deg type="double">65.5</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="102">
+			<name>Left Wing View</name>
+			<type>lookfrom</type>
+			<enabled type="bool">true</enabled>
+			<internal type="bool" archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">-3.53</x-offset-m>
+				<y-offset-m archive="y">6.96</y-offset-m>
+				<z-offset-m archive="y">5.69</z-offset-m>
+				<default-field-of-view-deg type="double">110.2</default-field-of-view-deg>
+				<heading-offset-deg archive="y">100</heading-offset-deg>
+				<pitch-offset-deg archive="y">-7</pitch-offset-deg>
+			</config>
+		</view>
+		<view n="103">
+			<name>Right Wing View</name>
+			<type>lookfrom</type>
+			<enabled type="bool">true</enabled>
+			<internal type="bool" archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">3.53</x-offset-m>
+				<y-offset-m archive="y">6.96</y-offset-m>
+				<z-offset-m archive="y">5.69</z-offset-m>
+				<default-field-of-view-deg type="double">110.2</default-field-of-view-deg>
+				<heading-offset-deg archive="y">260</heading-offset-deg>
+				<pitch-offset-deg archive="y">-7</pitch-offset-deg>
+			</config>
+		</view>
+		
+		<menubar>
+			<default>
+				<menu n="100">
+					<label>McDonnell Douglas MD-10</label>
+				</menu>
+			</default>
+		</menubar>
+		
+    </sim>
+	
+	<lsas n="0">
+		<enable type="bool">0</enable>
+	</lsas>
+
+</PropertyList>
