@@ -31,6 +31,55 @@
 	</model>
 	
 	<animation>
+		<type>spin</type>
+		<object-name>Blades1</object-name>
+		<factor>-67</factor>
+		<property>engines/engine[0]/n1</property>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>-8.138</y-m>
+			<z-m>3.49855</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>spin</type>
+		<object-name>Blades2</object-name>
+		<factor>-67</factor>
+		<property>engines/engine[1]/n1</property>
+		<axis>
+			<x1-m>22.5148</x1-m>
+			<y1-m>0</y1-m>
+			<z1-m>10.5188</z1-m>
+			<x2-m>18.7641</x2-m>
+			<y2-m>0</y2-m>
+			<z2-m>10.6498</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>spin</type>
+		<object-name>Blades3</object-name>
+		<factor>-67</factor>
+		<property>engines/engine[2]/n1</property>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>8.138</y-m>
+			<z-m>3.49855</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
 		<type>material</type>
 		<object-name>Fuselage</object-name>
 		<object-name>Vstab</object-name>
