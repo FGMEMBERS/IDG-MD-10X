@@ -317,6 +317,28 @@
 	
 	<animation>
 		<type>rotate</type>
+		<object-name>HorzStab</object-name>
+		<object-name>elevator.1o</object-name>
+		<object-name>elevator.1i</object-name>
+		<object-name>elevator.2i</object-name>
+		<object-name>elevator.2o</object-name>
+		<property>sim/multiplay/generic/float[6]</property>
+		<factor>10</factor>
+		<offset-deg>-5</offset-deg>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>19.6744</x-m>
+			<y-m>0</y-m>
+			<z-m>7.36555</z-m>
+		</center>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
 		<object-name>elevator.1o</object-name>
 		<property>controls/flight/elevator-out-left</property>
 		<factor>40</factor>
@@ -373,28 +395,6 @@
 			<y2-m>4.78229</y2-m>
 			<z2-m>7.43374</z2-m>
 		</axis>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>HorzStab</object-name>
-		<object-name>elevator.1o</object-name>
-		<object-name>elevator.1i</object-name>
-		<object-name>elevator.2i</object-name>
-		<object-name>elevator.2o</object-name>
-		<property>sim/multiplay/generic/float[6]</property>
-		<factor>10</factor>
-		<offset-deg>-5</offset-deg>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-		<center>
-			<x-m>19.6744</x-m>
-			<y-m>0</y-m>
-			<z-m>7.36555</z-m>
-		</center>
 	</animation>
 	
 	<animation>
