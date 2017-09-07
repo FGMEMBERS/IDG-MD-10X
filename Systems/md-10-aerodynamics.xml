@@ -230,7 +230,7 @@
 				<property>metrics/bw-ft</property>
 				<property>aero/bi2vel</property>
 				<property>velocities/p-aero-rad_sec</property>
-				<value>-1.86</value>
+				<value>-1.92</value>
 			</product>
 		</function>
 
@@ -253,7 +253,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<property>fcs/left-aileron-pos-rad</property>
-				<value>0.24</value>
+				<value>0.22</value>
 			</product>
 		</function>
 
