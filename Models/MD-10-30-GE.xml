@@ -12,7 +12,7 @@
 	
 	<nasal>
 		<load>
-		var livery_update = aircraft.livery_update.new("Aircraft/MD-10Family/Models/Liveries/MD-10-30");
+		var livery_update = aircraft.livery_update.new("Aircraft/IDG-MD-10X/Models/Liveries/MD-10-30");
 		</load>
 
 		<unload>
@@ -22,7 +22,7 @@
 	
 	<model>
 		<name>Cockpit</name>
-		<path>Aircraft/MD-11Family/Models/cockpit/cockpit.xml</path>
+		<path>Aircraft/IDG-MD-11X/Models/cockpit/cockpit.xml</path>
 		<offsets>
 			<x-m>2.45</x-m>
 			<y-m>0</y-m>

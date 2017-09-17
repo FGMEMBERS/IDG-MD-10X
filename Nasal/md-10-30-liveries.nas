@@ -1,1 +1,1 @@
-aircraft.livery.init("Aircraft/MD-10Family/Models/Liveries/MD-10-30");
+aircraft.livery.init("Aircraft/IDG-MD-10X/Models/Liveries/MD-10-30");

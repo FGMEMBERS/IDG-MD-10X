@@ -6,7 +6,7 @@
 #########################################
 -->
 
-<PropertyList include="../MD-11Family/MD-11-main.xml">
+<PropertyList include="../IDG-MD-11X/MD-11-main.xml">
 
 	<sim>
 	
@@ -25,7 +25,7 @@
 		</previews>
 
 		<startup>
-			<splash-texture>Aircraft/MD-10Family/Splash/SplashOld.png</splash-texture>
+			<splash-texture>Aircraft/IDG-MD-10X/Splash/SplashOld.png</splash-texture>
 		</startup>
 			
 		<view>
