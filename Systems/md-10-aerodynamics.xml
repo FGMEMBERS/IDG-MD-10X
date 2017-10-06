@@ -19,9 +19,9 @@
 					<independentVar lookup="row">aero/alpha-rad</independentVar>
 					<tableData>
 						-0.20 -0.800
-						 0.00  0.069
-						 0.15  1.460
-						 0.23  1.640
+						 0.00  0.049
+						 0.15  1.380
+						 0.23  1.570
 						 0.60  1.000
 					</tableData>
 				</table>
@@ -246,8 +246,8 @@
 			</product>
 		</function>
 
-		<function name="aero/moment/Roll_aileron">
-			<description>Roll moment due to aileron</description>
+		<function name="aero/moment/Roll_control">
+			<description>Roll moment due to roll control</description>
 			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
@@ -283,8 +283,8 @@
 			</product>
 		</function>
 
-		<function name="aero/moment/Pitch_elevator">
-			<description>Pitch moment due to elevator</description>
+		<function name="aero/moment/Pitch_control">
+			<description>Pitch moment due to pitch control</description>
 			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
@@ -293,9 +293,9 @@
 				<table>
 					<independentVar lookup="row">velocities/mach</independentVar>
 					<tableData>
-						0.0     -1.070
-						0.2     -0.910
-						1.0     -0.300
+						0.0     -0.600
+						0.2     -0.500
+						1.0     -0.100
 						2.0     -0.050
 					</tableData>
 				</table>
@@ -310,7 +310,7 @@
 				<property>metrics/cbarw-ft</property>
 				<property>aero/ci2vel</property>
 				<property>velocities/q-aero-rad_sec</property>
-				<value>-48</value>
+				<value>-38</value>
 			</product>
 		</function>
 
