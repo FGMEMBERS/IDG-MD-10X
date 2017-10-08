@@ -108,6 +108,12 @@
 		
     </sim>
 	
+	<controls n="0">
+		<hydraulic n="0">
+			<aileron-droop type="bool">0</aileron-droop>
+		</hydraulic>
+	</controls>
+	
 	<lsas n="0">
 		<enable type="bool">0</enable>
 	</lsas>
