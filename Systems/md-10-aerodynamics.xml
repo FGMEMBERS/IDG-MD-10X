@@ -253,7 +253,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<property>fcs/roll-pos-rad</property>
-				<value>0.22</value>
+				<value>0.23</value>
 			</product>
 		</function>
 
@@ -289,16 +289,8 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/cbarw-ft</property>
-				<property>fcs/pitch-pos-rad</property>
-				<table>
-					<independentVar lookup="row">velocities/mach</independentVar>
-					<tableData>
-						0.0     -0.600
-						0.2     -0.500
-						1.0     -0.100
-						2.0     -0.050
-					</tableData>
-				</table>
+				<property>fcs/pitch-pos-geared</property>
+				<value>-0.750</value>
 			</product>
 		</function>
 
