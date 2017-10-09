@@ -110,7 +110,7 @@
 	
 	<controls n="0">
 		<hydraulic n="0">
-			<aileron-droop type="bool">0</aileron-droop>
+			<aileron-droop-enable type="bool">0</aileron-droop-enable>
 		</hydraulic>
 	</controls>
 	

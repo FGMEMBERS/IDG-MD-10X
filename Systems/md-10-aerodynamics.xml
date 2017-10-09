@@ -66,12 +66,12 @@
 			</product>
 		</function>
 
-		<function name="aero/force/Lift_elevator">
-			<description>Lift due to Elevator Deflection</description>
+		<function name="aero/force/Lift_pitch_control">
+			<description>Lift due to pitch control deflection</description>
 			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
-				<property>fcs/elevator-pos-rad</property>
+				<property>fcs/pitch-pos-geared</property>
 				<value>0.1530</value>
 			</product>
 		</function>
@@ -183,12 +183,12 @@
 			</product>
 		</function>
 
-		<function name="aero/force/Drag_elevator">
-			<description>Drag due to Elevator Deflection</description>
+		<function name="aero/force/Drag_pitch_control">
+			<description>Drag due to pitch control deflection</description>
 			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
-				<abs><property>fcs/elevator-pos-norm</property></abs>
+				<abs><property>fcs/pitch-pos-norm</property></abs>
 				<value>0.055</value>
 			</product>
 		</function>
@@ -352,7 +352,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<property>fcs/rudder-pos-rad</property>
-				<value>-0.2</value>
+				<value>-0.075</value>
 			</product>
 		</function>
 
