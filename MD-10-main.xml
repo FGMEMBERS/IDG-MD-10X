@@ -9,10 +9,6 @@
 <PropertyList include="../IDG-MD-11X/MD-11-main.xml">
 
 	<sim>
-	
-		<author>it0uchpods Design Group: Joshua Davidson (it0uchpods), Jonathan Redpath (legoboyvdlp), Charlie Schwehm (Wecsje), J Maverick 16</author>
-		
-		<status>Pre V1.0</status>
 		
 		<checklists include="MD-11-Checklists.xml"/>
 		
