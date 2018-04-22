@@ -5,6 +5,8 @@ A very advanced simulation of the McDonnell Douglas MD-10 for FlightGear by it0u
 - Systems: Joshua Davidson (it0uchpods)
 - Cockpit: Jormapaappa1235, John Williams (tikibar), Joshua Davidson (it0uchpods)
 - Instruments: Joshua Davidson (it0uchpods)
+- MD-10 Concept: David Waggoner (SkyBoat)
+- MD-10-ERX Concept (Not Yet Implemented): David Waggoner (SkyBoat), Joshua Davidson (it0uchpods)
 
 Present pack includes the following McDonnell Douglas MD-10 variants:
 - MD-10-30
