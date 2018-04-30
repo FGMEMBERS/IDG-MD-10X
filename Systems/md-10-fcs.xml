@@ -105,7 +105,14 @@
 	<channel name="FCC: Pitch">
 		
 		<switch name="fcc/elevator-output">
-			<default value="/controls/flight/elevator-lsas"/>
+			<default value="/controls/flight/elevator"/>
+			<test value="fcc/afs/pitch-cmd">
+				fcc/afs/enabled eq 1
+			</test>
+		</switch>
+		
+		<switch name="fcc/elevator-output-nolsas">
+			<default value="/controls/flight/elevator"/>
 			<test value="fcc/afs/pitch-cmd">
 				fcc/afs/enabled eq 1
 			</test>
