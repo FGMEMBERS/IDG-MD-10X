@@ -1027,8 +1027,12 @@
 		
 		<switch name="hydraulics/tiller/switch">
 			<default value="/controls/flight/rudder"/>
-			<test value="/controls/flight/aileron">
-				/controls/flight/aileron-drives-tiller EQ 1
+			<test logic="AND" value="/controls/flight/aileron">
+				fcc/afs/enabled eq 0
+				/controls/flight/aileron-drives-tiller eq 1
+			</test>
+			<test value="fcc/afs/yaw-cmd">
+				fcc/afs/enabled eq 1
 			</test>
 		</switch>
 		
@@ -1051,6 +1055,44 @@
 			<rate_limit>70</rate_limit>
 			<output>fcs/steer-pos-deg[0]</output>
 		</actuator>
+	
+	</channel>
+	
+	<channel name="Brakes">
+		
+		<summer name="fcs/left-brake-summer">
+			<input>/controls/gear/brake-left</input>
+			<input>/controls/gear/brake-parking</input>
+			<clipto>
+				<min>-1</min>
+				<max>1</max>
+			</clipto>
+		</summer>
+		
+		<switch name="rubbish/left-brake-cmd-norm">
+			<default value="fcs/left-brake-summer"/>
+			<test value="/controls/autobrake/brake-left">
+				/controls/autobrake/active eq 1
+			</test>
+			<output>fcs/left-brake-cmd-norm</output>
+		</switch>
+		
+		<summer name="fcs/right-brake-summer">
+			<input>/controls/gear/brake-right</input>
+			<input>/controls/gear/brake-parking</input>
+			<clipto>
+				<min>-1</min>
+				<max>1</max>
+			</clipto>
+		</summer>
+		
+		<switch name="rubbish/right-brake-cmd-norm">
+			<default value="fcs/right-brake-summer"/>
+			<test value="/controls/autobrake/brake-right">
+				/controls/autobrake/active eq 1
+			</test>
+			<output>fcs/right-brake-cmd-norm</output>
+		</switch>
 	
 	</channel>
 
