@@ -1,0 +1,1 @@
+aircraft.livery.init("Aircraft/IDG-MD-10X/Models/Liveries/KC-10A");

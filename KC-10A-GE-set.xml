@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+##############################################
+# Copyright (c) Joshua Davidson (it0uchpods) #
+##############################################
+-->
+
+<PropertyList include="MD-10-main.xml">
+
+    <sim>
+		<sound>
+			<path>Aircraft/IDG-MD-11X/Sounds/cf680-sound.xml</path>
+		</sound>
+		<description>McDonnell Douglas KC-10A (Upgraded Flightdeck)</description>
+		<flight-model>jsb</flight-model>
+		<aero>KC-10A-GE</aero>
+			
+		<model n="0">
+			<path>Aircraft/IDG-MD-10X/Models/KC-10A-GE.xml</path>
+			<armrest type="double">0</armrest>
+			<door>
+				<position-x-m type="float">-24.0</position-x-m>
+				<position-y-m type="float">-2.3</position-y-m>
+				<position-z-m type="float">6.0</position-z-m>
+				<jetway-hood-deg type="float">5</jetway-hood-deg>
+			</door>
+			<door>
+				<position-x-m type="float">-14.5</position-x-m>
+				<position-y-m type="float">-2.8</position-y-m>
+				<position-z-m type="float">6.0</position-z-m>
+				<jetway-hood-deg type="float">1</jetway-hood-deg>
+			</door>
+			<livery>
+				<file type="string">USAF</file>
+			</livery>
+		</model>
+		
+		<systems n="0">
+			<autopilot n="6">
+				<path>Aircraft/IDG-MD-11X/Systems/fadec-ge.xml</path>
+			</autopilot>
+		</systems>
+    </sim>
+	
+	<options n="0">
+		<eng>GE</eng>
+	</options>
+    
+    <nasal n="0">
+		<specific>
+			<file>Aircraft/IDG-MD-10X/Nasal/kc-10a-liveries.nas</file>
+		</specific>
+    </nasal>
+
+</PropertyList>
