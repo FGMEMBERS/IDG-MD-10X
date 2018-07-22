@@ -10,6 +10,8 @@
 
 	<sim>
 		
+		<author>it0uchpods Design Group: Joshua Davidson (it0uchpods), Jonathan Redpath (legoboyvdlp), Matthew Anderson (FB)</author>
+		
 		<checklists include="MD-11-Checklists.xml"/>
 		
 		<previews>
