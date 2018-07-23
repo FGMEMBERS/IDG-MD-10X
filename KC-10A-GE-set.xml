@@ -36,6 +36,31 @@
 			</livery>
 		</model>
 		
+		<menubar>
+			<default>
+				<menu n="100">
+					<item n="2">
+						<label>Toggle Boom</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							refuel_control.toggleBoom();
+							</script>
+						</binding>
+					</item>
+					<!--item n="3">
+						<label>Toggle Drogues</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							refuel_control.toggleDrogues();
+							</script>
+						</binding>
+					</item-->
+				</menu>
+			</default>
+		</menubar>
+		
 		<systems n="0">
 			<autopilot n="6">
 				<path>Aircraft/IDG-MD-11X/Systems/fadec-ge.xml</path>
@@ -45,6 +70,8 @@
 	
 	<options n="0">
 		<eng>GE</eng>
+		<boom-pos-norm type="double">0</boom-pos-norm>
+		<drogue-pos-norm type="double">0</drogue-pos-norm>
 	</options>
     
     <nasal n="0">
@@ -57,6 +84,9 @@
         <aar>
             <file>Aircraft/Generic/aar.nas</file>
         </aar>
+		<refuel_control>
+			<file>Aircraft/IDG-MD-10X/Nasal/refuel-control.nas</file>
+		</refuel_control>
     </nasal>
 
 </PropertyList>

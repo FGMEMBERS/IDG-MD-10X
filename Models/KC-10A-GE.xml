@@ -20,6 +20,48 @@
 		</unload>
 	</nasal>
 	
+	<animation>
+		<name>Boom rotate</name>
+		<type>rotate</type>
+		<object-name>BoomGroup</object-name>
+		<property>controls/engines/engine[3]/n1</property> <!-- Hijack the N1 property of engine 3 to send boom position over MP -->
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.7</ind><dep>40</dep></entry>
+			<entry><ind>1</ind><dep>40</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>17.971</x-m>
+			<y-m>0</y-m>
+			<z-m>4.19861</z-m>
+		</center>
+	</animation>
+	
+	<animation>
+		<name>Boom extend</name>
+		<type>translate</type>
+		<object-name>Hose</object-name>
+		<property>controls/engines/engine[3]/n1</property> <!-- Hijack the N1 property of engine 3 to send boom position over MP -->
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.7</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>3.5</dep></entry>
+		</interpolation>
+		<axis>
+			<x1-m>17.971</x1-m>
+			<y1-m>0</y1-m>
+			<z1-m>4.19861</z1-m>
+			<x2-m>24.8413</x2-m>
+			<y2-m>0</y2-m>
+			<z2-m>5.76847</z2-m>
+		</axis>
+	</animation>
+	
 	<model>
 		<name>Pushback</name>
 		<path>Aircraft/IDG-MD-11X/Models/Services/Pushback/Douglas.xml</path>
