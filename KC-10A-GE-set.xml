@@ -12,7 +12,7 @@
 		<sound>
 			<path>Aircraft/IDG-MD-11X/Sounds/cf680-sound.xml</path>
 		</sound>
-		<description>Boeing/McDonnell Douglas KC-10A Extender (Upgraded Flightdeck)</description>
+		<description>McDonnell Douglas KC-10A Extender (Upgraded Flightdeck)</description>
 		<flight-model>jsb</flight-model>
 		<aero>KC-10A-GE</aero>
 			
