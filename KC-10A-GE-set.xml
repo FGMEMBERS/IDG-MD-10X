@@ -12,7 +12,7 @@
 		<sound>
 			<path>Aircraft/IDG-MD-11X/Sounds/cf680-sound.xml</path>
 		</sound>
-		<description>McDonnell Douglas KC-10A (Upgraded Flightdeck)</description>
+		<description>McDonnell Douglas KC-10A Extender (Upgraded Flightdeck)</description>
 		<flight-model>jsb</flight-model>
 		<aero>KC-10A-GE</aero>
 			
@@ -51,6 +51,12 @@
 		<specific>
 			<file>Aircraft/IDG-MD-10X/Nasal/kc-10a-liveries.nas</file>
 		</specific>
+		<!--damage>
+            <file>Aircraft/IDG-MD-10X/Nasal/damage.nas</file>
+        </damage-->
+        <aar>
+            <file>Aircraft/Generic/aar.nas</file>
+        </aar>
     </nasal>
 
 </PropertyList>
