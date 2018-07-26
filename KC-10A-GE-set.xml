@@ -15,6 +15,14 @@
 		<description>McDonnell Douglas KC-10A Extender (Upgraded Flightdeck)</description>
 		<flight-model>jsb</flight-model>
 		<aero>KC-10A-GE</aero>
+
+		<previews>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splashKC10.png</path>
+			</preview>
+		</previews>
 			
 		<model n="0">
 			<path>Aircraft/IDG-MD-10X/Models/KC-10A-GE.xml</path>
