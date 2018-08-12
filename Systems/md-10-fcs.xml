@@ -229,7 +229,7 @@
 	
 	</channel>
 	
-	<channel name="Surface Droop">
+	<channel name="Common">
 		
 		<fcs_function name="hydraulics/aileron-droop">
 			<function>
@@ -254,6 +254,14 @@
 				</table>
 			</function>
 		</fcs_function>
+		
+		<switch name="hydraulics/aileron-out-enable">
+			<default value="0"/>
+			<test logic="OR" value="1">
+				/fdm/jsbsim/fcs/slat-pos-deg ge 2
+				position/wow eq 1
+			</test>
+		</switch>
 	
 	</channel>
 	
@@ -284,11 +292,11 @@
 			<default value="hydraulics/aileron-droop"/>
 			<test logic="AND" value="0">
 				hydraulics/aileron-out-l/pressure-switch-or eq 1
-				/fdm/jsbsim/fcs/slat-pos-deg lt 2
+				hydraulics/aileron-out-enable ne 1
 			</test>
 			<test logic="AND" value="hydraulics/aileron-out-l/function">
 				hydraulics/aileron-out-l/pressure-switch-or eq 1
-				/fdm/jsbsim/fcs/slat-pos-deg ge 2
+				hydraulics/aileron-out-enable eq 1
 			</test>
 			<clipto>
 				<min>-1.0</min>
@@ -304,8 +312,8 @@
 		<aerosurface_scale name="hydraulics/aileron-out-l/final-deg">
 			<input>hydraulics/aileron-out-l/final</input>
 			<range>
-				<min>-25</min>
-				<max>25</max>
+				<min>-20</min>
+				<max>20</max>
 			</range>
 		</aerosurface_scale>
 	
@@ -346,8 +354,8 @@
 		<aerosurface_scale name="hydraulics/aileron-in-l/final-deg">
 			<input>hydraulics/aileron-in-l/final</input>
 			<range>
-				<min>-25</min>
-				<max>25</max>
+				<min>-20</min>
+				<max>20</max>
 			</range>
 		</aerosurface_scale>
 	
@@ -388,8 +396,8 @@
 		<aerosurface_scale name="hydraulics/aileron-in-r/final-deg">
 			<input>hydraulics/aileron-in-r/final</input>
 			<range>
-				<min>-25</min>
-				<max>25</max>
+				<min>-20</min>
+				<max>20</max>
 			</range>
 		</aerosurface_scale>
 	
@@ -422,11 +430,11 @@
 			<default value="hydraulics/aileron-droop"/>
 			<test logic="AND" value="0">
 				hydraulics/aileron-out-r/pressure-switch-or eq 1
-				/fdm/jsbsim/fcs/slat-pos-deg lt 2
+				hydraulics/aileron-out-enable ne 1
 			</test>
 			<test logic="AND" value="hydraulics/aileron-out-r/function">
 				hydraulics/aileron-out-r/pressure-switch-or eq 1
-				/fdm/jsbsim/fcs/slat-pos-deg ge 2
+				hydraulics/aileron-out-enable eq 1
 			</test>
 			<clipto>
 				<min>-1.0</min>
@@ -442,8 +450,8 @@
 		<aerosurface_scale name="hydraulics/aileron-out-r/final-deg">
 			<input>hydraulics/aileron-out-r/final</input>
 			<range>
-				<min>-25</min>
-				<max>25</max>
+				<min>-20</min>
+				<max>20</max>
 			</range>
 		</aerosurface_scale>
 	
@@ -527,8 +535,8 @@
 		<aerosurface_scale name="hydraulics/elevator-out-l/final-deg">
 			<input>hydraulics/elevator-out-l/final</input>
 			<range>
-				<min>-30</min>
-				<max>30</max>
+				<min>-20.1</min>
+				<max>17.2</max>
 			</range>
 		</aerosurface_scale>
 	
@@ -556,8 +564,8 @@
 		<aerosurface_scale name="hydraulics/elevator-in-l/final-deg">
 			<input>hydraulics/elevator-in-l/final</input>
 			<range>
-				<min>-30</min>
-				<max>30</max>
+				<min>-20.1</min>
+				<max>17.2</max>
 			</range>
 		</aerosurface_scale>
 	
@@ -585,8 +593,8 @@
 		<aerosurface_scale name="hydraulics/elevator-in-r/final-deg">
 			<input>hydraulics/elevator-in-r/final</input>
 			<range>
-				<min>-30</min>
-				<max>30</max>
+				<min>-20.1</min>
+				<max>17.2</max>
 			</range>
 		</aerosurface_scale>
 	
@@ -614,8 +622,8 @@
 		<aerosurface_scale name="hydraulics/elevator-out-r/final-deg">
 			<input>hydraulics/elevator-out-r/final</input>
 			<range>
-				<min>-30</min>
-				<max>30</max>
+				<min>-20.1</min>
+				<max>17.2</max>
 			</range>
 		</aerosurface_scale>
 	
@@ -627,10 +635,10 @@
 			<input>/controls/flight/elevator-trim</input>
 			<domain>
 				<min>-1.00</min>
-				<max>0.07</max>
+				<max>0.064516</max>
 			</domain>
 			<range>
-				<min>-14.0</min>
+				<min>-15.5</min>
 				<max>1.0</max>
 			</range>
 		</aerosurface_scale>
@@ -644,10 +652,10 @@
 			<input>hydraulics/elevator-trim/lag</input>
 			<domain>
 				<min>-1.00</min>
-				<max>0.07</max>
+				<max>0.064516</max>
 			</domain>
 			<range>
-				<min>-14.0</min>
+				<min>-15.5</min>
 				<max>1.0</max>
 			</range>
 		</aerosurface_scale>
