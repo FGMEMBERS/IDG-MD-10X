@@ -3,6 +3,8 @@
 Have at least following versions installed:
 * FlightGear 2018.1.0 or newer
 
+Have a compatible revision of the IDG-MD-11X installed (see "revision-md-11-min.txt")
+
 ## Install using ZIP Snapshot
 [Download](https://github.com/it0uchpods/IDG-MD-10X/archive/master.zip) the zip file.  
 Use your prefered archive utility to unzip the archive.

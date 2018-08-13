@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+##############################################
+# Copyright (c) Joshua Davidson (it0uchpods) #
+##############################################
+-->
+
+<!-- MD-10 Addon Helper Dialog -->
+
+<PropertyList>
+
+	<name>addon-helper-update</name>
+	<layout>vbox</layout>
+	<color>
+		<red>0.5</red>
+		<green>0</green>
+		<blue>0</blue>
+		<alpha>0.9</alpha>
+	</color>
+
+	<group>
+		<layout>hbox</layout>
+		<text>
+			<halign>left</halign>
+			<label>Out of Date!</label>
+		</text>
+	</group>
+	
+	<hrule>
+		<color>
+			<red>1.0</red>
+			<green>1.0</green>
+			<blue>1.0</blue>
+			<alpha>0.9</alpha>
+		</color>
+	</hrule>
+	
+	<group>
+		<layout>table</layout>
+		
+		<group>
+			<row>0</row>
+			<col>0</col>
+			<visible>
+				<not-equals>
+					<property>/systems/acconfig/md-10-incompatible</property>
+					<value>1</value>
+				</not-equals>
+			</visible>
+			<layout>vbox</layout>
+			
+			<text>
+				<halign>center</halign>
+				<label>Attention: Your IDG-MD-10X Addon is out of date! This means you are missing out on bugfixes, and new features!</label>
+			</text>
+			<text>
+				<halign>center</halign>
+				<label>You can continue for now, but it is highly recommended to download the latest version by the button below.</label>
+			</text>
+			<text>
+				<halign>center</halign>
+				<label>You will need to restart FlightGear, and install the latest .zip file.</label>
+			</text>
+			<text>
+				<halign>center</halign>
+				<label>GIT users: Please press Remind Me Later, and run a "git pull" command. (or pull using GIT GUI)</label>
+			</text>
+		</group>
+		
+		<group>
+			<row>0</row>
+			<col>0</col>
+			<visible>
+				<equals>
+					<property>/systems/acconfig/md-10-incompatible</property>
+					<value>1</value>
+				</equals>
+			</visible>
+			<layout>vbox</layout>
+			
+			<text>
+				<halign>center</halign>
+				<label>Attention: Your IDG-MD-10X Addon is out of date! Your IDG-MD-11X is likely too old for this revision.</label>
+			</text>
+			<text>
+				<halign>center</halign>
+				<label>You need to update your IDG-MD-11X, at least the revision listed in "revision-md-11-min.txt"</label>
+			</text>
+			<text>
+				<halign>center</halign>
+				<label>You will need to restart FlightGear, and install the latest .zip file.</label>
+			</text>
+			<text>
+				<halign>center</halign>
+				<label>GIT users: Please close FGFS, and run a "git pull" command. (or pull using GIT GUI)</label>
+			</text>
+		</group>
+	</group>
+	
+	<hrule>
+		<color>
+			<red>1.0</red>
+			<green>1.0</green>
+			<blue>1.0</blue>
+			<alpha>0.9</alpha>
+		</color>
+	</hrule>
+
+	<group>
+		<layout>table</layout>
+		
+		<button>
+			<row>0</row>
+			<col>0</col>
+			<visible>
+				<not-equals>
+					<property>/systems/acconfig/md-10-incompatible</property>
+					<value>1</value>
+				</not-equals>
+			</visible>
+			<color>
+				<red>0</red>
+				<green>0.5</green>
+				<blue>0</blue>
+				<alpha>0.9</alpha>
+			</color>
+			<halign>center</halign>
+			<legend>Download Update (MD-10X)</legend>
+			<pref-width>220</pref-width>
+			<binding>
+				<command>open-browser</command>
+				<path>https://www.github.com/it0uchpods/IDG-MD-10X/archive/master.zip</path>
+			</binding>
+			<binding>
+				<command>exit</command>
+			</binding>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+		<button>
+			<row>0</row>
+			<col>0</col>
+			<visible>
+				<equals>
+					<property>/systems/acconfig/md-10-incompatible</property>
+					<value>1</value>
+				</equals>
+			</visible>
+			<color>
+				<red>0</red>
+				<green>0.5</green>
+				<blue>0</blue>
+				<alpha>0.9</alpha>
+			</color>
+			<halign>center</halign>
+			<legend>Download Update (MD-11X)</legend>
+			<pref-width>220</pref-width>
+			<binding>
+				<command>open-browser</command>
+				<path>https://www.github.com/it0uchpods/IDG-MD-11X/archive/master.zip</path>
+			</binding>
+			<binding>
+				<command>exit</command>
+			</binding>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+		<button>
+			<row>0</row>
+			<col>1</col>
+			<visible>
+				<equals>
+					<property>/systems/acconfig/mismatch-code</property>
+					<value>0x000</value>
+				</equals>
+			</visible>
+			<color>
+				<red>0.6</red>
+				<green>0</green>
+				<blue>0</blue>
+				<alpha>0.9</alpha>
+			</color>
+			<halign>center</halign>
+			<legend>Remind Me Later</legend>
+			<pref-width>220</pref-width>
+			<binding>
+				<command>nasal</command>
+				<script>
+				if (getprop("/systems/acconfig/mismatch-code") == "0x000") {
+					if (getprop("/systems/acconfig/options/welcome-skip") != 1) {
+						acconfig.welcome_dlg.open();
+					}
+				} else {
+					acconfig.error_mismatch.open();
+				}
+				</script>
+			</binding>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+		<button>
+			<row>0</row>
+			<col>1</col>
+			<visible>
+				<not-equals>
+					<property>/systems/acconfig/mismatch-code</property>
+					<value>0x000</value>
+				</not-equals>
+			</visible>
+			<color>
+				<red>0.6</red>
+				<green>0</green>
+				<blue>0</blue>
+				<alpha>0.9</alpha>
+			</color>
+			<halign>center</halign>
+			<legend>Close FGFS</legend>
+			<pref-width>220</pref-width>
+			<binding>
+				<command>exit</command>
+			</binding>
+		</button>
+	</group>
+	
+</PropertyList>

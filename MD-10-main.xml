@@ -159,5 +159,11 @@
 	<lsas n="0">
 		<enable type="bool">0</enable>
 	</lsas>
+	
+	<nasal n="0">
+		<addonhelper>
+			<file>Aircraft/IDG-MD-10X/AddonHelper/addonhelper.nas</file>
+		</addonhelper>
+	</nasal>
 
 </PropertyList>
