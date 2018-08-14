@@ -145,6 +145,19 @@
 		
     </sim>
 	
+	<consumables n="0">
+		<fuel>
+			<tank n="0"><name>Left Wing</name></tank>
+			<tank n="1"><name>Center</name></tank>
+			<tank n="2"><name>Right Wing</name></tank>
+			<tank n="3"><name>Auxiliary</name></tank>
+			<tank n="4"><name>INOP</name></tank>
+			<tank n="5"><name>Engine 1 Pipes</name></tank>
+			<tank n="6"><name>Engine 2 Pipes</name></tank>
+			<tank n="7"><name>Engine 3 Pipes</name></tank>
+		</fuel>
+	</consumables>
+	
 	<controls n="0">
 		<engines n="0">
 			<engine n="3">
