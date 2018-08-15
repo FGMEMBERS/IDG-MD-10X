@@ -8,14 +8,10 @@
 
 <system name="MD-11: FCS">
 	
-	<property value="0">fcc/lsas/pid</property>
 	<property value="0">fcc/yaw/tc-pid</property>
 	<property value="0.0">fcs/slat-pos-deg</property>
 	
 	<!-- Default gains for tuning -->
-	<property value="0">fcc/lsas/p-gain</property>
-	<property value="0">fcc/lsas/i-gain</property>
-	<property value="0">fcc/lsas/d-gain</property>
 	<property value="0">fcc/yaw/yd-p-gain</property>
 	<property value="0">fcc/yaw/tc-p-gain</property>
 	<property value="0">fcc/yaw/tc-i-gain</property>
@@ -103,6 +99,11 @@
 				fcc/afs/enabled eq 1
 			</test>
 		</switch>
+		
+		<lag_filter name="fcc/aileron-yoke">
+			<input>fcc/aileron-output</input>
+			<c1>20</c1>
+		</lag_filter>
 	
 	</channel>
 	
@@ -113,8 +114,12 @@
 			<test value="fcc/afs/pitch-cmd">
 				fcc/afs/enabled eq 1
 			</test>
-			<output>fcc/elevator-output-nolsas</output>
 		</switch>
+		
+		<lag_filter name="fcc/elevator-yoke">
+			<input>fcc/elevator-output</input>
+			<c1>20</c1>
+		</lag_filter>
 	
 	</channel>
 	
@@ -124,13 +129,11 @@
 			<function>
 				<table>
 					<independentVar lookup="row">/controls/flight/rudder</independentVar>
-					<independentVar lookup="column">fcc/afs/enabled</independentVar>
 					<tableData>
-						       0  1
-						-1.00 -1  0
-						-0.04  0  0
-						 0.04  0  0
-						 1.00  1  0
+						-1.00 -1
+						-0.04  0
+						 0.04  0
+						 1.00  1
 					</tableData>
 				</table>
 			</function>
@@ -175,12 +178,15 @@
 		
 		<switch name="fcc/yaw/trigger">
 			<default value="0"/>
-			<test logic="OR" value="1">
+			<test logic="OR" value="-1">
 				fcc/yaw/gain-switch gt 0
-				fcc/yaw/tc-pid le -0.199
-				fcc/yaw/tc-pid ge 0.199
 				/position/gear-agl-ft lt 50
 				fcc/yaw/autoland-switch eq 1
+				fcc/yaw/rudder-nul ne 0
+			</test>
+			<test logic="OR" value="1">
+				fcc/yaw/tc-pid le -0.199
+				fcc/yaw/tc-pid ge 0.199
 			</test>
 		</switch>
 		
@@ -201,8 +207,7 @@
 			<default value="fcc/yaw/tc-pid"/>
 			<test logic="OR" value="0">
 				position/wow eq 1
-				fcc/yaw/rudder-nul gt 0
-				fcc/yaw/rudder-nul lt 0
+				fcc/yaw/rudder-nul ne 0
 			</test>
 		</switch>
 		
@@ -226,6 +231,11 @@
 			</test>
 			<output>/controls/flight/rudder-fcc</output>
 		</switch>
+		
+		<lag_filter name="fcc/rudder-pedal">
+			<input>fcc/rudder-output</input>
+			<c1>20</c1>
+		</lag_filter>
 	
 	</channel>
 	

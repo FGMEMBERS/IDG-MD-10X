@@ -173,6 +173,11 @@
 		<enable type="bool">0</enable>
 	</lsas>
 	
+	<rcws n="0">
+		<enable type="bool">0</enable>
+		<equipped type="bool">0</equipped>
+	</rcws>
+	
 	<nasal n="0">
 		<addonhelper>
 			<file>Aircraft/IDG-MD-10X/AddonHelper/addonhelper.nas</file>
