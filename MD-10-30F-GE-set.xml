@@ -15,7 +15,7 @@
 		<description>McDonnell Douglas MD-10-30F (CF6-50C)</description>
 		<flight-model>jsb</flight-model>
 		<aero>MD-10-30-GE</aero>
-			
+		
 		<model n="0">
 			<path>Aircraft/IDG-MD-10X/Models/MD-10-30F-GE.xml</path>
 			<armrest type="double">0</armrest>
