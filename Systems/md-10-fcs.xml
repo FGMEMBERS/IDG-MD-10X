@@ -287,7 +287,7 @@
 		<switch name="hydraulics/aileron-out-enable">
 			<default value="0"/>
 			<test logic="OR" value="1">
-				/fdm/jsbsim/fcs/slat-pos-deg ge 2
+				fcs/slat-pos-deg ge 2
 				position/wow eq 1
 			</test>
 		</switch>
