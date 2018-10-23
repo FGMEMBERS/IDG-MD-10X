@@ -182,6 +182,9 @@
 		<addonhelper>
 			<file>Aircraft/IDG-MD-10X/AddonHelper/addonhelper.nas</file>
 		</addonhelper>
+		<md-10>
+			<file>Aircraft/IDG-MD-10X/Nasal/light-manager.nas</file>
+		</md-10>
 	</nasal>
 
 </PropertyList>
