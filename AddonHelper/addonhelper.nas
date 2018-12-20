@@ -1,9 +1,7 @@
 # Aircraft Config Center Addon Helper
 # Joshua Davidson (it0uchpods)
 
-##############################################
-# Copyright (c) Joshua Davidson (it0uchpods) #
-##############################################
+# Copyright (c) 2018 Joshua Davidson (it0uchpods)
 
 setprop("/systems/acconfig/md-10-revision", 0);
 setprop("/systems/acconfig/md-10-new-revision", 0);
@@ -18,6 +16,7 @@ print("IDG MD-10X Revision: " ~ current_revision);
 setprop("/systems/acconfig/md-10-revision", current_revision);
 var revisionMD11MinFile = (getprop("/sim/aircraft-dir") ~ "/revision-md-11-min.txt");
 var MD11min_revision = io.readfile(revisionMD11MinFile);
+setprop("/systems/acconfig/md-11-min-revision", MD11min_revision);
 
 setlistener("/systems/acconfig/md-10-new-revision", func {
 	if (getprop("/systems/acconfig/md-10-new-revision") > current_revision) {
@@ -34,7 +33,7 @@ if (getprop("/systems/acconfig/revision") >= MD11min_revision) {
 setlistener("/sim/signals/fdm-initialized", func {
 	if (getprop("/systems/acconfig/md-10-incompatible") == 1) {
 		setprop("/systems/acconfig/mismatch-code", "0x14F");
-		setprop("/systems/acconfig/mismatch-reason", "MD-10X Addon is too old! Please update the addon from the update dialog.");
+		setprop("/systems/acconfig/mismatch-reason", "IDG-MD-11X is too old! Please update it from the update dialog.");
 		print("Mismatch: 0x14F");
 		settimer(func {
 			acconfig.error_mismatch.open();
