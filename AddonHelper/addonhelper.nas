@@ -34,6 +34,7 @@ setlistener("/sim/signals/fdm-initialized", func {
 	if (getprop("/systems/acconfig/md-10-incompatible") == 1) {
 		setprop("/systems/acconfig/mismatch-code", "0x14F");
 		setprop("/systems/acconfig/mismatch-reason", "IDG-MD-11X is too old! Please update it from the update dialog.");
+		libraries.systemsLoop.stop();
 		print("Mismatch: 0x14F");
 		settimer(func {
 			acconfig.error_mismatch.open();
