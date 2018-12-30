@@ -130,15 +130,7 @@
 				<pitch-offset-deg archive="y">-7</pitch-offset-deg>
 			</config>
 		</view>
-		
-		<menubar>
-			<default>
-				<menu n="100">
-					<label>IDG-MD-10X</label>
-				</menu>
-			</default>
-		</menubar>
-		
+	
     </sim>
 	
 	<consumables n="0">
