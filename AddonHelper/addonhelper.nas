@@ -1,7 +1,7 @@
 # Aircraft Config Center Addon Helper
 # Joshua Davidson (it0uchpods)
 
-# Copyright (c) 2018 Joshua Davidson (it0uchpods)
+# Copyright (c) 2019 Joshua Davidson (it0uchpods)
 
 setprop("/systems/acconfig/md-10-revision", 0);
 setprop("/systems/acconfig/md-10-new-revision", 0);
