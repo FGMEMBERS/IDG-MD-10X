@@ -82,9 +82,9 @@
 		<specific>
 			<file>Aircraft/IDG-MD-10X/Nasal/kc-10a-liveries.nas</file>
 		</specific>
-		<!--damage>
+		<damage>
             <file>Aircraft/IDG-MD-10X/Nasal/damage.nas</file>
-        </damage-->
+        </damage>
         <aar>
             <file>Aircraft/Generic/aar.nas</file>
         </aar>
