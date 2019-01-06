@@ -496,62 +496,6 @@
 	
 	</channel>
 	
-	<channel name="Roll Aero">
-		
-		<scheduled_gain name="hydraulics/aileron-out-l/final-deg-aero">
-			<input>hydraulics/aileron-out-l/final-deg</input>
-			<table>
-				<independentVar lookup="row">velocities/mach</independentVar>
-				<independentVar lookup="column">atmosphere/density-altitude</independentVar>
-				<tableData>
-					     0     43000
-					0.0  1.00  0.700
-					0.9  0.25  0.550
-				</tableData>
-			</table>
-		</scheduled_gain>
-		
-		<scheduled_gain name="hydraulics/aileron-in-l/final-deg-aero">
-			<input>hydraulics/aileron-in-l/final-deg</input>
-			<table>
-				<independentVar lookup="row">velocities/mach</independentVar>
-				<independentVar lookup="column">atmosphere/density-altitude</independentVar>
-				<tableData>
-					     0     43000
-					0.0  1.00  0.900
-					0.9  0.25  0.750
-				</tableData>
-			</table>
-		</scheduled_gain>
-		
-		<scheduled_gain name="hydraulics/aileron-in-r/final-deg-aero">
-			<input>hydraulics/aileron-in-r/final-deg</input>
-			<table>
-				<independentVar lookup="row">velocities/mach</independentVar>
-				<independentVar lookup="column">atmosphere/density-altitude</independentVar>
-				<tableData>
-					     0     43000
-					0.0  1.00  0.900
-					0.9  0.25  0.750
-				</tableData>
-			</table>
-		</scheduled_gain>
-		
-		<scheduled_gain name="hydraulics/aileron-out-r/final-deg-aero">
-			<input>hydraulics/aileron-out-r/final-deg</input>
-			<table>
-				<independentVar lookup="row">velocities/mach</independentVar>
-				<independentVar lookup="column">atmosphere/density-altitude</independentVar>
-				<tableData>
-					     0     43000
-					0.0  1.00  0.900
-					0.9  0.25  0.750
-				</tableData>
-			</table>
-		</scheduled_gain>
-	
-	</channel>
-	
 	<channel name="Elevator L Outer">
 		
 		<switch name="hydraulics/elevator-out-l/switch">
@@ -711,75 +655,6 @@
 				<max>1.0</max>
 			</range>
 		</aerosurface_scale>
-	
-	</channel>
-	
-	<channel name="Pitch Aero">
-		
-		<scheduled_gain name="hydraulics/elevator-out-l/final-deg-aero">
-			<input>hydraulics/elevator-out-l/final-deg</input>
-			<table>
-				<independentVar lookup="row">velocities/mach</independentVar>
-				<independentVar lookup="column">atmosphere/density-altitude</independentVar>
-				<tableData>
-					     0     43000
-					0.0  1.00  0.850
-					0.9  0.01  0.700
-				</tableData>
-			</table>
-		</scheduled_gain>
-		
-		<scheduled_gain name="hydraulics/elevator-in-l/final-deg-aero">
-			<input>hydraulics/elevator-in-l/final-deg</input>
-			<table>
-				<independentVar lookup="row">velocities/mach</independentVar>
-				<independentVar lookup="column">atmosphere/density-altitude</independentVar>
-				<tableData>
-					     0     43000
-					0.0  1.00  0.850
-					0.9  0.01  0.700
-				</tableData>
-			</table>
-		</scheduled_gain>
-		
-		<scheduled_gain name="hydraulics/elevator-in-r/final-deg-aero">
-			<input>hydraulics/elevator-in-r/final-deg</input>
-			<table>
-				<independentVar lookup="row">velocities/mach</independentVar>
-				<independentVar lookup="column">atmosphere/density-altitude</independentVar>
-				<tableData>
-					     0     43000
-					0.0  1.00  0.850
-					0.9  0.01  0.700
-				</tableData>
-			</table>
-		</scheduled_gain>
-		
-		<scheduled_gain name="hydraulics/elevator-out-r/final-deg-aero">
-			<input>hydraulics/elevator-out-r/final-deg</input>
-			<table>
-				<independentVar lookup="row">velocities/mach</independentVar>
-				<independentVar lookup="column">atmosphere/density-altitude</independentVar>
-				<tableData>
-					     0     43000
-					0.0  1.00  0.850
-					0.9  0.01  0.700
-				</tableData>
-			</table>
-		</scheduled_gain>
-		
-		<scheduled_gain name="hydraulics/elevator-trim/final-deg-aero">
-			<input>hydraulics/elevator-trim/final-deg</input>
-			<table>
-				<independentVar lookup="row">velocities/mach</independentVar>
-				<independentVar lookup="column">atmosphere/density-altitude</independentVar>
-				<tableData>
-					     0     43000
-					0.0  1.00  0.850
-					0.9  0.01  0.700
-				</tableData>
-			</table>
-		</scheduled_gain>
 	
 	</channel>
 	
