@@ -23,11 +23,11 @@
 		<name>Boom rotate</name>
 		<type>rotate</type>
 		<object-name>BoomGroup</object-name>
-		<property>controls/engines/engine[3]/n1</property> <!-- Hijack the N1 property of engine 3 to send boom position over MP -->
+		<property>engines/engine[6]/n1</property> <!-- Hijack the N1 property of engine 6 to send boom position over MP -->
 		<interpolation>
-			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.0</ind><dep> 0</dep></entry>
 			<entry><ind>0.7</ind><dep>40</dep></entry>
-			<entry><ind>1</ind><dep>40</dep></entry>
+			<entry><ind>1.0</ind><dep>40</dep></entry>
 		</interpolation>
 		<axis>
 			<x>0</x>
@@ -45,11 +45,11 @@
 		<name>Boom extend</name>
 		<type>translate</type>
 		<object-name>Hose</object-name>
-		<property>controls/engines/engine[3]/n1</property> <!-- Hijack the N1 property of engine 3 to send boom position over MP -->
+		<property>engines/engine[6]/n1</property> <!-- Hijack the N1 property of engine 6 to send boom position over MP -->
 		<interpolation>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>0.7</ind><dep>0</dep></entry>
-			<entry><ind>1</ind><dep>3.5</dep></entry>
+			<entry><ind>0.0</ind><dep>0.0</dep></entry>
+			<entry><ind>0.7</ind><dep>0.0</dep></entry>
+			<entry><ind>1.0</ind><dep>3.5</dep></entry>
 		</interpolation>
 		<axis>
 			<x1-m>17.971</x1-m>

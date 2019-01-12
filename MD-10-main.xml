@@ -147,11 +147,6 @@
 	</consumables>
 	
 	<controls n="0">
-		<engines n="0">
-			<engine n="3">
-				<n1 alias="/options/boom-pos-norm"/> <!-- Hijack the N1 property of engine 3 to send boom position over MP -->
-			</engine>
-		</engines>
 		<hydraulic n="0">
 			<aileron-droop-enable type="bool">0</aileron-droop-enable>
 		</hydraulic>

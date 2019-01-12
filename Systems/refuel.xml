@@ -1,0 +1,45 @@
+<!-- McDonnell Douglas MD-10 JSBsim -->
+
+<!-- Copyright (c) 2019 Joshua Davidson (it0uchpods) -->
+
+<system name="KC-10: Refuel">
+	
+	<channel name="Boom">
+		
+		<switch name="fcs/boom-rate">
+			<default value="0.0"/>
+			<test logic="OR" value="0.2">
+				/systems/hydraulic/sys1-psi ge 1500
+				/systems/hydraulic/sys2-psi ge 1500
+				/systems/hydraulic/sys3-psi ge 1500
+			</test>
+		</switch>
+		
+		<actuator name="fcs/boom-norm">
+			<input>/options/boom-pos-cmd</input>
+			<rate_limit>fcs/boom-rate</rate_limit>
+			<output>/engines/engine[6]/n1</output>
+		</actuator>
+	
+	</channel>
+	
+	<channel name="Drogues">
+		
+		<switch name="fcs/drogue-rate">
+			<default value="0.0"/>
+			<test logic="OR" value="1.0">
+				/systems/hydraulic/sys1-psi ge 1500
+				/systems/hydraulic/sys2-psi ge 1500
+				/systems/hydraulic/sys3-psi ge 1500
+			</test>
+		</switch>
+		
+		<actuator name="fcs/drogue-norm">
+			<input>/options/drogue-pos-cmd</input>
+			<rate_limit>fcs/drogue-rate</rate_limit>
+			<output>/engines/engine[7]/n1</output>
+		</actuator>
+	
+	</channel>
+
+</system>

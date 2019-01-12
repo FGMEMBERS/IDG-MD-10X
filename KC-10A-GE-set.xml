@@ -42,7 +42,7 @@
 		
 		<menubar>
 			<default>
-				<menu n="100">
+				<menu n="101">
 					<item n="2">
 						<label>Toggle Boom</label>
 						<binding>
@@ -74,8 +74,8 @@
 	
 	<options n="0">
 		<eng>GE</eng>
-		<boom-pos-norm type="double">0</boom-pos-norm>
-		<drogue-pos-norm type="double">0</drogue-pos-norm>
+		<boom-pos-cmd type="double">0</boom-pos-cmd>
+		<drogue-pos-cmd type="double">0</drogue-pos-cmd>
 	</options>
     
     <nasal n="0">
