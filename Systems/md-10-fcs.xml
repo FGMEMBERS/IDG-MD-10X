@@ -851,6 +851,9 @@
 		
 		<switch name="fcs/flap-pos-rate">
 			<default value="0.0"/>
+			<test value="100">
+				/systems/acconfig/autoconfig-running eq 1
+			</test>
 			<test logic="OR" value="1.66666666">
 				/systems/hydraulic/sys1-psi ge 1500
 				/systems/hydraulic/sys2-psi ge 1500
@@ -882,6 +885,9 @@
 		
 		<switch name="fcs/slat-pos-rate">
 			<default value="0.0"/>
+			<test value="100">
+				/systems/acconfig/autoconfig-running eq 1
+			</test>
 			<test value="1.55">
 				/systems/hydraulic/sys1-psi ge 1500
 			</test>
