@@ -8,7 +8,7 @@
 		
 		<author>it0uchpods Design Group: Joshua Davidson (it0uchpods), Jonathan Redpath (legoboyvdlp), Matthew Anderson (FB), J Maverick 16</author>
 		
-		<checklists include="MD-11-Checklists.xml"/>
+		<checklists include="../IDG-MD-11X/MD-11-Checklists.xml"/>
 		
 		<previews>
 			<preview>

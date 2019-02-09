@@ -14,7 +14,7 @@ xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 	</fileheader>
 	
 	<metrics file="Systems/md-10-metrics"/>
-	<mass_balance file="Systems/kc-10-mass-balance"/>
+	<mass_balance file="Systems/md-10f-mass-balance"/>
 	<ground_reactions file="Systems/md-10-ground-reactions"/>
 	
 	<propulsion>
@@ -200,7 +200,6 @@ xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 	<system file="glass-effect1"/>
 	<system file="md-10-fcs"/>
 	<system file="md-10-spoiler"/>
-	<system file="refuel"/>
 	
 	<flight_control name="none"/>
 	
