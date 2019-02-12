@@ -134,6 +134,11 @@
 			<input>fcc/elevator-output</input>
 			<c1>20</c1>
 		</lag_filter>
+		
+		<lag_filter name="fcc/elevator-trim-lever">
+			<input>/controls/flight/elevator-trim-lever</input>
+			<c1>20</c1>
+		</lag_filter>
 	
 	</channel>
 	
@@ -863,6 +868,21 @@
 		
 		<lag_filter name="fcc/reverse-thr-lever[2]">
 			<input>/controls/engines/engine[2]/throttle-rev</input>
+			<c1>20</c1>
+		</lag_filter>
+		
+		<lag_filter name="fcc/engine-cutoff[0]">
+			<input>/controls/engines/engine[0]/cutoff-switch</input>
+			<c1>20</c1>
+		</lag_filter>
+		
+		<lag_filter name="fcc/engine-cutoff[1]">
+			<input>/controls/engines/engine[1]/cutoff-switch</input>
+			<c1>20</c1>
+		</lag_filter>
+		
+		<lag_filter name="fcc/engine-cutoff[2]">
+			<input>/controls/engines/engine[2]/cutoff-switch</input>
 			<c1>20</c1>
 		</lag_filter>
 	
